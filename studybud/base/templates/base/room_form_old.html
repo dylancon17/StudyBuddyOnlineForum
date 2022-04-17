@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div>
+    <form method="POST" action=""> <!--Can be used to redirect after competion-->
+        {% csrf_token %}
+        {{form.as_p}} <!--as_p treats each piece as it's own paragraph-->
+        <input type="submit" value="Submit" />
+    </form>
+</div>
+
+{% endblock content %}
